@@ -2,11 +2,7 @@
   <div class="row d-flex flex-wrap">
     <div class="col-md-3">
       <h2>User info</h2>
-      <% if @user.image.attached? %>
-        <%= image_tag @user.image, size: "100x100" %>
-      <% else %>
-        <%= image_tag 'no_image', size: "100x100" %>
-      <% end %>
+      <%= image_tag @user.get_profile_image(100,100) %>
       <table class="table">
         <tbody>
           <tr>
