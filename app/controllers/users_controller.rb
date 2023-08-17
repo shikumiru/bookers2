@@ -8,6 +8,8 @@ class UsersController < ApplicationController
   end
 
   def index
+    @user = current_user
+    @users = User.all
   end
 
   def user_params
